@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oferta</title>
+    <link rel="stylesheet" href="style-oferta.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8bf9f62bee.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./Img/black_paw.png" style="width: 40px" alt="" />
+        </div>
+        <ul class="links">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="about">O mnie</a></li>
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="contact">Kontakt</a></li>
+        </ul>
+        <!-- <a href="#" class="action_btn">Get Started</a> -->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="about">O mnie</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="contact">Kontakt</a></li>
+      </div>
+    </header>
+    <div class="main">
+      <div class="oferta1">
+        <div class="photo">
+          <img src="./fotki-kolor/gim strona 8.jpg" alt="" />
+        </div>
+        <div class="tekst">
+          <h2>Konsultacja diagnostyczna 120 EUR (1,5 h)</h2>
+          <p>
+            Analiza ankiety behawioralnej wypełnionej przez opiekuna, analiza
+            nadesłanych materiałów video i zdjęć, analiza mieszkania pod kątem
+            zapewnienia zaspokojenia potrzeb gatunkowych kota, wytłumaczenie
+            opiekunowi problemu i podanie pierwszych zaleceń behawioralnych po
+            konsultacji: przygotowanie raportu dla opiekuna z opisem przypadku
+            oraz z zaleceniami, przygotowanie raportu dla prowadzącego lekarza
+            weterynarii ( jeżeli jest taka konieczność) pozostaję we
+            wspierającym kontakcie z opiekunem ( telefon, aplikacje, email)
+            przez okres sześciu tygodni i odpowiadam na wątpliwości i pytania
+            dotyczące terapii.
+          </p>
+        </div>
+      </div>
+      <div class="oferta2">
+        <div class="tekst">
+          <h2>konsultacje kontynuujące terapię 60 EUR (1h)</h2>
+          <p>
+            analiza uzyskanych wyników terapii, zalecenie kolejnych kroków w
+            terapii.
+          </p>
+        </div>
+        <div class="photo">
+          <img src="./fotki-kolor/kot strona 5.jpg" alt="" />
+        </div>
+      </div>
+      <div class="oferta3">
+        <div class="photo">
+          <img src="./fotki-kolor/gim strona 8.jpg" alt="" />
+        </div>
+        <div class="tekst">
+          <h2>Konsultacja ogólna 60 EUR (1h)</h2>
+          <p>
+            jeżeli: masz problem, który chcesz przedyskutować, chcesz się
+            przygotować się do adopcji kota lub psa, chcesz się przygotować do
+            dokocenia posiadanego już kota, szukasz pomocy w wyborze
+            odpowiedniego zwierzęcia dla swojego stylu życia, planujesz
+            kotyfikację mieszkania i nie wiesz, jak się za to zabrać itp.
+          </p>
+        </div>
+      </div>
+      <div class="oferta4">
+        <div class="tekst">
+          <h2>4. Sesja zdjęciowa dla Twojego kota</h2>
+          <p>
+            aby uchwycić i zatrzymać w kadrze piękne kocie emocje 200 EUR ( 2H)
+          </p>
+        </div>
+        <div class="photo">
+          <img src="./fotki-kolor/kot strona 5.jpg" alt="" />
+        </div>
+      </div>
+      <div class="podsumowanie">
+        <h2>
+          Konsultacje odbywają się w domu opiekuna lub online W przypadku,
+          jeżeli opiekun posiada więcej niż dwa koty preferuję konsultację na
+          miejscu w domu opiekuna, aby mieć pewność, że wszystkie, nawet
+          najmniejsze szczegóły zostały wzięte pod uwagę.
+        </h2>
+        <br />
+        <p>Dodatkowo</p>
+        <br />
+        <ol class="strzalki-lista">
+          <li>Koszty dojazdu 20-30 EUR.</li>
+          <li>Darmowy dojazd – Nivelles</li>
+          <li>Pracuję także w weekendy.</li>
+        </ol>
+      </div>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>

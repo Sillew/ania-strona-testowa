@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100dvh;
+  background-color: #fffdf2;
+  background-image: url(./Img/kot2-flip.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Cormorant;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+a:hover {
+  color: orange;
+}
+
+/* Header */
+
+header {
+  position: relative;
+}
+
+.navbar {
+  /* padding-top: 50px; */
+  /* width: 100%; */
+  height: 90px;
+  width: 80dvw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  backdrop-filter: blur(5px);
+}
+.navbar a {
+  position: relative;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 4rem;
+}
+.navbar a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0;
+  background-color: red;
+  transition: width 0.3s ease;
+  margin-top: 10px; /* dopasuj odstęp */
+}
+.navbar a:hover::after {
+  width: 60px; /* szerokość linii przy hoverze */
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+  height: 220px;
+}
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown_menu .action_btn {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Hero section */
+
+section#hero {
+  /* border: 3px dotted blue; */
+  height: calc(100vh - 60px); /* 60px czyli wysokosc navbara */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: left;
+  padding-left: calc(100dvh / 5);
+  color: #fff;
+}
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+#hero p {
+  font-size: 20px;
+  color: #000;
+  line-height: 35px;
+}
+/* Comments */
+
+#comment {
+  height: 30dvh;
+  text-align: center;
+  color: black;
+  align-content: center;
+  margin: 70px 0;
+  font-size: 2rem;
+  font-family: Charm;
+}
+#comment h1 {
+  font-family: Tangerine;
+  font-weight: lighter;
+  font-size: 5rem;
+}
+#comment p {
+  font-family: Tangerine;
+  position: relative;
+  display: inline-block;
+  padding-top: 2rem;
+  font-size: 3rem;
+}
+#comment p::after {
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Center it under the text */
+  height: 3px;
+  width: 150px;
+  background-color: red;
+  position: absolute;
+  margin-top: 40px;
+}
+
+/* Ciekawe tematy */
+section#moja-praca {
+  /* background-color: cornflowerblue; */
+  padding: 4rem 2rem;
+  color: #000;
+  text-align: center;
+}
+
+/* Sekcja moja praca */
+#moja-praca {
+  background-image: url(./Img/lapki3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+section#moja-praca h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+section#moja-praca h2 {
+  font-size: 2rem;
+}
+
+.projekty {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.projekt {
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 400px;
+  transition: transform 0.3s ease;
+  /* margin: auto 0; */
+}
+.projekt img {
+  max-inline-size: 100%;
+  border-radius: 10px;
+}
+.projekt h2 {
+  margin-top: 2rem;
+}
+.projekt-omnie {
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 400px;
+  transition: transform 0.3s ease;
+  margin: auto 0;
+  text-align: justify;
+}
+
+.projekt:hover {
+  transform: scale(1.05);
+}
+
+/* O mnie */
+
+#omnie {
+  padding: 4rem 2rem;
+  color: #000;
+  text-align: center;
+}
+#omnie h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+#omnie p {
+  /* max-width: 800px; */
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+}
+#omnie .projekt {
+  min-width: 500px;
+}
+.omnie-img img {
+  box-shadow: 3px 6px 44px 3px rgb(255, 59, 59);
+}
+/*  ---------- Testimonials ---------- */
+#testimonials h1 {
+  text-align: center;
+}
+#testimonials h2 {
+  text-align: right;
+  padding-top: 20px;
+}
+#testimonials {
+  height: fit-content;
+  margin-top: 200px;
+  flex-wrap: wrap;
+}
+.projekt-testim {
+  border: 1px solid black;
+  flex-basis: 25%;
+  min-height: 230px;
+  padding: 30px;
+  min-width: 200px;
+  border-radius: 20px;
+}
+
+/* ---------- Kontakt ---------- */
+.kontakt {
+  display: flex;
+  height: 70dvh;
+  background-image: url(./Img/poczta.jpg);
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  margin-top: 200px;
+}
+.kontakt .kontakt-img {
+  flex-basis: 50%;
+}
+.kontakt .kontakt-text {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  align-content: center;
+  line-height: 80px;
+}
+.kontakt-text h1 {
+  font-size: 3rem;
+}
+.kontakt-text h2 {
+  font-size: 2rem;
+}
+
+.formularz {
+  height: 60dvh;
+  background-image: url(./Img/mailbox\ 1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  margin-top: 100px;
+}
+footer {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  height: 5dvh;
+  background-color: black;
+}
+footer div {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Responsive design */
+
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+    top: 70px;
+  }
+}
